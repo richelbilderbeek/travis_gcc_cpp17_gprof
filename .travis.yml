@@ -14,7 +14,7 @@ install:
 
 script: 
   - g++ main.cpp -DNDEBUG -O2 -pg -std=c++17 -o travis_gcc_cpp17_gprof
-  - ./travis_gcc_cpp17_gprof 
+  - time ./travis_gcc_cpp17_gprof 
   # produce the gprof log
   - gprof ./travis_gcc_cpp17_gprof  > gprof.log
   # Read the 100 top lines
